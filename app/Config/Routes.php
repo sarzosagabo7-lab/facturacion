@@ -3,7 +3,7 @@
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
-$routes->get('inicio', 'Home::index');
+$routes->get('/', 'Home::index');
 
 $routes->get('/saludo/(:any)/(:any)', 'Home::saludo/$1/$2', ['as' => 'saludo']);
 
