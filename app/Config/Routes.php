@@ -2,13 +2,21 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-/** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
+// Rutas Públicas (Login)
+$routes->get('login', 'AuthController::index');
+$routes->post('login/authenticate', 'AuthController::authenticate');
+$routes->get('logout', 'AuthController::logout');
 
-$routes->get('/saludo/(:any)/(:any)', 'Home::saludo/$1/$2', ['as' => 'saludo']);
+// Rutas Protegidas (Requieren autenticación)
+$routes->group('', ['filter' => 'auth'], function($routes) {
+    $routes->get('/', 'Home::index');
+    $routes->get('facturacion', 'Home::index');
+    // Registra aquí los demás módulos protegidos...
+});
 
-$routes->get('/sumar/(:num)/(:num)', 'Home::sumita/$1/$2', ['as' => 'sumita']);
 
-$routes->get('/prueba', 'prueba::index');
+
+
+
 
 
