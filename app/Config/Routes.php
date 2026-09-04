@@ -105,4 +105,14 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         ['filter' => 'ajax']
     );
 
+    /*
+        |--------------------------------------------------------------------------
+        | MARCAS
+        |--------------------------------------------------------------------------
+        */
+        $routes->get('marcas', 'MarcaController::index');
+        $routes->post('marcas/guardar', 'MarcaController::store');
+        $routes->post('marcas/actualizar/(:num)', 'MarcaController::update/$1');
+        $routes->get('marcas/eliminar/(:num)', 'MarcaController::delete/$1');
+
 });

@@ -52,25 +52,29 @@
                     </ul>
                 </li>
 
-                <!-- MANTENIMIENTO / INVENTARIO -->
-<li class="nav-item <?= url_is('categorias*') ? 'menu-open' : '' ?>">
-    <a href="#" class="nav-link <?= url_is('categorias*') ? 'active' : '' ?>">
-        <i class="nav-icon bi bi-boxes"></i>
-        <p>
-            Inventario
-            <i class="nav-arrow bi bi-chevron-right"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item">
-            <a href="<?= base_url('categorias') ?>" 
-               class="nav-link <?= url_is('categorias*') ? 'active' : '' ?>">
-                <i class="nav-icon bi bi-tags"></i>
-                <p>Categorías</p>
+              <li class="nav-item <?= (url_is('categorias*') || url_is('marcas*')) ? 'menu-open' : '' ?>">
+            <a href="#" class="nav-link <?= (url_is('categorias*') || url_is('marcas*')) ? 'active' : '' ?>">
+                <i class="nav-icon bi bi-boxes"></i>
+                <p>
+                    Inventario
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
             </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="<?= base_url('categorias') ?>" class="nav-link <?= url_is('categorias*') ? 'active' : '' ?>">
+                        <i class="nav-icon bi bi-tags"></i>
+                        <p>Categorías</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('marcas') ?>" class="nav-link <?= url_is('marcas*') ? 'active' : '' ?>">
+                        <i class="nav-icon bi bi-bookmark-star"></i>
+                        <p>Marcas</p>
+                    </a>
+                </li>
+            </ul>
         </li>
-    </ul>
-</li>
 
 
                
