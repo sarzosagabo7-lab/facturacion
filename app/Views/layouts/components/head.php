@@ -16,6 +16,12 @@
     <!-- AdminLTE v4 CSS (Local) -->
     <link rel="stylesheet" href="<?= base_url('assets/adminlte/dist/css/adminlte.min.css') ?>">
 
+
+    <!-- CSS DATATABLES -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.3/css/dataTables.dataTables.min.css">
+
+
+
     <!-- CSS adicional por sección -->
     <?= $this->renderSection('styles') ?>
 </head>
