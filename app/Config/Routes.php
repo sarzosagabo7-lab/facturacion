@@ -115,4 +115,14 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->post('marcas/actualizar/(:num)', 'MarcaController::update/$1');
         $routes->get('marcas/eliminar/(:num)', 'MarcaController::delete/$1');
 
+    /*
+        |--------------------------------------------------------------------------
+        | CLIENTES
+        |--------------------------------------------------------------------------
+        */
+        $routes->get('clientes', 'ClienteController::index');
+        $routes->post('clientes/guardar', 'ClienteController::store');
+        $routes->post('clientes/actualizar/(:num)', 'ClienteController::update/$1');
+        $routes->get('clientes/eliminar/(:num)', 'ClienteController::delete/$1');
+
 });
