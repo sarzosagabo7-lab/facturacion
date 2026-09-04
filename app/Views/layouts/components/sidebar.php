@@ -84,6 +84,22 @@
                     </a>
                 </li>
 
+                <!-- PROVEEDORES -->
+                <li class="nav-item">
+                    <a href="<?= base_url('proveedores') ?>" class="nav-link <?= url_is('proveedores*') ? 'active' : '' ?>">
+                        <i class="nav-icon bi bi-truck"></i>
+                        <p>Proveedores</p>
+                    </a>
+                </li>
+
+                <!-- USUARIOS -->
+                <li class="nav-item">
+                    <a href="<?= base_url('usuarios') ?>" class="nav-link <?= url_is('usuarios*') ? 'active' : '' ?>">
+                        <i class="nav-icon bi bi-shield-lock"></i>
+                        <p>Usuarios</p>
+                    </a>
+                </li>
+
 
                
 

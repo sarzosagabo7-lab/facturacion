@@ -125,4 +125,20 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->post('clientes/actualizar/(:num)', 'ClienteController::update/$1');
         $routes->get('clientes/eliminar/(:num)', 'ClienteController::delete/$1');
 
+        /*
+        |--------------------------------------------------------------------------
+        | PROVEEDORES
+        |--------------------------------------------------------------------------
+        */
+        $routes->get('proveedores', 'ProveedorController::index');
+        $routes->post('proveedores/guardar', 'ProveedorController::store');
+        $routes->post('proveedores/actualizar/(:num)', 'ProveedorController::update/$1');
+        $routes->get('proveedores/eliminar/(:num)', 'ProveedorController::delete/$1');
+
+      // Rutas para la gestión de usuarios
+$routes->get('usuarios', 'UsuarioController::index');
+$routes->post('usuarios/guardar', 'UsuarioController::store');
+$routes->post('usuarios/actualizar/(:num)', 'UsuarioController::update/$1');
+$routes->get('usuarios/eliminar/(:num)', 'UsuarioController::delete/$1');
+
 });
